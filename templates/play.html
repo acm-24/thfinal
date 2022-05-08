@@ -1,0 +1,84 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block head1 %}
+<link rel="stylesheet" href="{%static 'playstyle.css'%}">
+{% endblock head1 %}
+{% block body %}
+style="background-image:  url('{% static "img/bg10.png"%}')";
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;"
+{% endblock body %}
+{% block content %}
+<div>
+    <p class="repsize" style="padding-left:15px;padding-right:20px;color:white;font-family: 'PT Serif', serif;font-weight:bold;">🎯{{ play1.e_no }}&nbsp;<span class="float-end">✨Reputation- {{ play1.reputation }}</span></p>
+</div>
+      </div>
+      <div class="border-light border-1">
+        <h1 class="mx-auto" style="text-align: center; color:white;font-family: 'Black Ops One', cursive;">Level {{ qstn.q_id }} </h1>
+    </div>
+        <!-- <img src="/static/img/s1.png" alt="stamp" style="height: 65px; width:90px; display: inline-block; padding-bottom:20px"> -->
+    <div class="p-2 rounded-3 my-2 mx-auto divstyle">
+        <img src="/media/{{ qstn.q_img }}" class="h-185 w-100" alt="ques_pic" style="max-width:100%">
+        <center>
+            <form method="post" action="{% url 'play' %}" class="mt-2">
+                {% csrf_token %}
+                <input type="text" class="text-line text-center" placeholder="Your guess 🖋" name="ans" required>
+                <button style="font-family: 'Eczar', serif; border-radius:10px;" class="padd">Submit</button>
+            </form>
+        </center>
+    </div>
+    <br>
+        <div class="row m-3">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2">
+                <center>
+                    <form method="post" action="{% url 'hint1' %}">
+                        {% csrf_token %}
+                        <button  type="submit" class="transform1" style="padding:0;outline:none;background-color:transparent" >
+                        <div class="stickynote mx-auto" style="background-color:#B4FF9F;">
+                            <h4 style="font-family: 'Eczar', serif;" class="cen">Hint 1</h4>
+                        </div>
+                    </button>
+                    </form>
+                </center>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2">
+                <center>
+                    <form method="post" action="{% url 'hint2' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="transform2" style="padding:0;outline:none;background-color:transparent" >
+                            <div class="stickynote  mx-auto" style="background-color:#F9FFA4 ;">
+                                <h4 style="font-family: 'Eczar', serif;" class="cen">Hint 2</h4>
+                            </div>
+                        </button>
+                   </form>
+                </center>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2">
+                <center>
+                    <form method="post" action="{% url 'first_letter' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="transform1" style="padding:0;outline:none;background-color:transparent" >
+                            <div class="stickynote  mx-auto" style="background-color:#B8FFF9;">
+                                <h4 style="font-family: 'Eczar', serif;" class="cen">1st letter</h4>
+                            </div>
+                        </button>
+                   </form>
+                </center>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2">
+                <center>
+                    <form method="post" action="{% url 'length' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="transform2" style="padding:0;outline:none;background-color:transparent;" >
+                            <div class="stickynote  mx-auto" style="background-color:#F4BBBB" >
+                                <h4 style="font-family: 'Eczar', serif;" class="cen">Length</h4>
+                            </div>
+                        </button>
+                   </form>
+                </center>
+            </div>
+        </div>
+        
+{% endblock %}

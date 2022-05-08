@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block head1 %}
+<link rel="stylesheet" href="{%static 'thankstyle.css'%}">
+{% endblock head1 %}
+
+{% block body %}
+style="background-color : black;"
+{% endblock body %}
+
+{% block content %}
+<div style="height:84vh"> 
+    <div class="container">
+        <p class="repsize" style="color:white;font-family: 'PT Serif', serif;">🎯{{ play1.e_no }}&nbsp;<span class="float-end">✨Reputation- {{ play1.reputation }}</span></p>
+    </div>
+    <h1 style="text-align:center ;color:white; font-family: 'Anonymous Pro', monospace;position:relative;top: 40%;">The End</h1>
+    <h2 class="line anim-typewriter my-auto" style="color:white; font-family: 'Anonymous Pro', monospace;">Thanks for playing</h2>
+</div>
+
+{% endblock content %}

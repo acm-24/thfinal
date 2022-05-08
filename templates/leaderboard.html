@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{%static 'css/lead.css'%}">
+
+<center><table class="zigzag">
+  <thead>
+    <tr>
+      <th class="header">Position</th>
+      <th class="header">Employee Number</th>
+      <th class="header">Reputation</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {% for x in play1 %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ x.e_no }}</td>
+                    <td>{{ x.reputation }}</td>
+                </tr>
+               {% endfor %}
+  </tbody>
+  
+</table></center>
+
+
+{% endblock %}

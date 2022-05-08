@@ -1,0 +1,115 @@
+.text-line {
+    background-color: transparent;
+    color: #3a0e0e;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: x-large;
+    cursor: none;
+    border-bottom: solid #0e0d0d 1px;
+    font-family: 'Copse', serif;
+    font-weight: bold;
+    padding: 3px 10px;
+    color: #474747;
+}
+.padd
+{
+    margin-top: 0px;
+}
+.repsize
+{
+    font-size: x-large;
+}
+.stickynote
+{
+    height:130px;
+    width:130px;
+    transition: 0.2s ease-in-out;
+}
+.cen{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 130px;
+}
+.cen:hover{
+    color: #c01313;
+}
+.stickynote:hover
+{
+    box-shadow: 10px 10px 24px 5px rgba(182, 173, 173, 0.75);
+    border-color: #000000;
+    border-bottom-right-radius: 30px;
+}
+.divstyle{
+    max-width:520px; 
+    background-color:rgb(235, 230, 221);
+}
+.transform1{
+    transform:rotate(20deg);
+}
+.transform2{
+    transform:rotate(-10deg);
+}
+@media only screen and (max-width: 1100px)
+{
+   .divstyle{
+    max-width:400px; 
+  }
+  .stickynote{
+      max-height: 120px;
+      max-width: 120px;
+  }
+  .cen{
+      line-height: 120px;
+  }
+} 
+@media only screen and (max-width: 770px)
+{
+   .stickynote{
+       max-height: 50px;
+       max-width: 120px;
+   }
+   .cen{
+       line-height: 50px;
+   }
+   .transform1{
+    transform:rotate(0deg);
+   }
+   .transform2{
+    transform:rotate(0deg);
+   }
+} 
+@media only screen and (max-width: 500px)
+{
+    .repsize
+    {
+        font-size: medium;
+    }
+}
+@media only screen and (max-width: 400px)
+{
+    .text-line {
+        font-size: large;
+        cursor: none;
+        border-bottom: solid #0e0d0d 1px;
+        font-family: 'Copse', serif;
+        font-weight: bold;
+        padding: 3px 10px;
+        color: #474747;
+    }
+    .padd{
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 325px)
+{
+   .padd{
+       margin-top: 10px;
+   }
+   .stickynote{
+    max-width: 100px;
+   }
+}

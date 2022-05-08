@@ -1,0 +1,48 @@
+{% extends 'home.html' %}
+{% block body %}
+style="background-color:#24292F"
+{% endblock body %}
+{% block content %}
+    <div class="container-fluid">
+        <br>
+            <h2 class="font-effect-neon" style="color:white;   font-family: Lato;
+            font-size: 5em; text-align: center;">Level {{ qstn.q_id }} </h2>
+            <hr style="width: 300px; background:plum; height: 4px;" class="mx-auto">
+            <div class="container p-2 rounded-3" style="max-width:600px; background-color: rgb(89, 14, 139)">
+                <div class="shadow">
+                    <h3 class="mx-auto p-1" style="background: rgb(231, 231, 63); width: 320px; text-align: center; "><i class="fa fa-star" style="font-size:x-large ;"></i>&nbsp;&nbsp;{{ play1.e_no }}'s Reputation- {{ play1.reputation }}</h3>
+                </div>
+            </div>
+           
+            
+                <div class="p-2 rounded-3 mx-auto" style="max-width:600px; background-color: rgb(214, 98, 154)">
+                    <img src="/media/{{ qstn.q_img }}" class="h-100 w-100" alt="ques_pic">
+                </div>
+                <br>
+                <center>
+                    <div>
+                        <form method="post" action="{% url 'play' %}" class="mx-auto">
+                            {% csrf_token %}
+                            <i class="fa fa-user-circle text-light" style="font-size:x-large ;"></i>
+                            &nbsp;&nbsp;
+                            <input type="text" name="ans" placeholder="Your Guess" required>
+                            <button>Submit</button>
+                            <!-- <input type="hidden" name="e" value="{{ play1.e_no_id }}"> -->
+                        </form>
+                    </div>
+                    <div class="my-3">
+                        <form method="post" action="{% url 'hint1' %}" style="display: inline-block;">
+                            {% csrf_token %}
+                            <button class="btn btn-outline-info md-5">💡 Hint 1</button>
+                            <!-- <input type="hidden" name="e" value="{{ play1.e_no_id }}"> -->
+                       </form>
+                       <form method="post" action="{% url 'hint2' %}" style="display: inline-block;">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-info">💡 Hint 2</button>
+                        <!-- <input type="hidden" name="e" value="{{ play1.e_no_id }}"> -->
+                      </form>
+                    </div>
+                </center>
+    </div>
+
+{% endblock %}

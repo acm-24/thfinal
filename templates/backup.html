@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- box-shadow: 10px 10px 24px 0px rgba(182, 173, 173, 0.75) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Play</title>
+    <style>
+
+        .text-line {
+            background-color: transparent;
+            color: #3a0e0e;
+            outline: none;
+            outline-style: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: x-large;
+            cursor: none;
+            border-bottom: solid #0e0d0d 1px;
+            font-family: 'Montserrat', sans-serif;
+            padding: 3px 10px;
+        }
+        .stickynote
+        {
+            height:170px;
+            width:170px;
+            transition: 0.2s ease-in-out;
+        }
+        .cen{
+            text-align: center;
+            vertical-align: middle;
+            line-height: 170px;
+        }
+        .cen:hover{
+            color: #c01313;
+        }
+        .stickynote:hover
+        {
+            box-shadow: 10px 10px 24px 5px rgba(182, 173, 173, 0.75);
+            border-color: #000000;
+            border-bottom-right-radius: 30px;
+        }
+        .divstyle{
+            max-width:520px; 
+            background-color:rgb(235, 230, 221);
+        }
+        @media only screen and (max-width: 1100px)
+        {
+           .divstyle{
+            max-width:400px; 
+          }
+          .stickynote{
+              max-height: 150px;
+              max-width: 150px;
+          }
+          .cen{
+              line-height: 150px;
+          }
+        } 
+        @media only screen and (max-width: 765px)
+        {
+           .stickynote{
+               max-height: 100px;
+           }
+           .cen{
+               line-height: 100px;
+           }
+        } 
+        @media only screen and (max-width: 540px)
+        {
+           .stickynote{
+               max-width: 130px;
+               max-height: 100px;
+           }
+           .cen{
+               line-height: 100px;
+           }
+           .text-line{
+            font-size: x-large;
+           }
+        } 
+        @media only screen and (max-width: 400px)
+        {
+           .stickynote{
+               max-width: 120px;
+               max-height: 100px;
+           }
+           .cen{
+               line-height: 100px;
+           }
+           .text-line{
+            font-size: large;
+           }
+           .divstyle{
+            max-width:350px; 
+          }
+        } 
+    </style>
+</head>
+<style>
+    .bg
+    {
+        background-image: url('{% static "img/bg10.png"%}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+</style>
+<body class="bg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Employee Of The Year</a>
+          </div>
+        </div>
+      </nav>
+      </div>
+        <div class="border-light border-1" style="padding-top:10px ;padding-bottom:10px">
+            <h3 class="mx-auto" style="text-align: center; color:white;font-weight:bold ;font-family: 'Montserrat', sans-serif;">205121051's Reputation- 100&nbsp;</h3>
+        </div>
+        <!-- <img src="/static/img/s1.png" alt="stamp" style="height: 65px; width:90px; display: inline-block; padding-bottom:20px"> -->
+    <div class="p-2 rounded-3 my-2 mx-auto divstyle">
+        <img src="\static\img\palm.jpg" class="h-100 w-100" alt="ques_pic" style="max-width:100%">
+        <br><br>
+        <center>
+            <form action="post">
+                <input type="text" class="text-line text-center" placeholder="Your guess 🖋">
+            </form>
+        </center>
+    </div>
+        <div class="row m-3">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2 mx-0">
+                <div class="bg-info stickynote mx-auto" style="transform:rotate(20deg);">
+                    <h3 style="font-family: 'Montserrat', sans-serif;" class="cen">&nbsp;&nbsp;Hint 1</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2 mx-0"">
+                <div class="bg-warning stickynote  mx-auto" style="transform:rotate(-10deg);">
+                    <h3 style="font-family: 'Montserrat', sans-serif;" class="cen">&nbsp;&nbsp;Hint 2</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2 mx-0"">
+                <div class="bg-white stickynote  mx-auto" style="transform:rotate(20deg);">
+                    <h4 style="font-family: 'Montserrat', sans-serif;" class="cen">&nbsp;&nbsp;1st Letter</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 my-2 mx-0"">
+                <div class="stickynote  mx-auto" style="background-color:burlywood ;transform:rotate(-10deg);">
+                    <h4 style="font-family: 'Montserrat', sans-serif;" class="cen">&nbsp;&nbsp;Length</h4>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

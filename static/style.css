@@ -1,0 +1,29 @@
+.social{
+    opacity: 0;
+    width: 30px;
+}
+
+.our-team:hover 
+{
+    display: block;
+    background: #17bebb;
+    color: #fff;
+    transition: 0.3s;
+}
+.our-team:hover > .social
+{
+    transition: 0.4s;
+    opacity: 1;
+    background: #fff;
+}
+
+.col-xs-0, 
+.col-sm-0,
+.col-md-0,
+.col-lg-0 {
+  flex: 0 0 0;
+  max-width: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+  
